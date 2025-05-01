@@ -1,0 +1,123 @@
+/* src/app/app.component.css */
+:host {
+    display: block;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    line-height: 1.5;
+    color: #333;
+  }
+  
+  .container {
+    max-width: 650px;
+    margin: 2rem auto;
+    padding: 1.5rem 2rem;
+    border: 1px solid #dfe1e5;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 1px 6px rgba(32, 33, 36, 0.1);
+  }
+  
+  h1 {
+    color: #202124;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    font-size: 1.8em;
+  }
+  
+  h1 .ai-icon {
+    color: #673ab7;
+    vertical-align: middle;
+    font-size: 1.1em;
+    margin-left: 6px;
+  }
+  
+  p { /* General paragraph */
+    color: #5f6368;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+  }
+  
+  .input-area textarea {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 1rem;
+    border: 1px solid #dadce0;
+    border-radius: 6px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    resize: vertical;
+    min-height: 120px;
+    line-height: 1.4;
+  }
+  
+  .input-area textarea:focus {
+    outline: none;
+    border-color: #673ab7;
+    box-shadow: 0 0 0 3px rgba(103, 58, 183, 0.15);
+  }
+  
+  
+  .summarize-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background-color: #673ab7;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+    min-height: 44px;
+    box-sizing: border-box;
+  }
+  
+  .summarize-button:hover:not(:disabled) {
+    background-color: #5e35b1;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .summarize-button:disabled {
+    background-color: #e0e0e0;
+    color: #9e9e9e;
+    cursor: not-allowed;
+    box-shadow: none;
+  }
+  
+  /* Common styles for result boxes */
+  .loading-indicator,
+  .summary-output,
+  .error-message {
+    margin-top: 1.5rem;
+    padding: 1rem 1.5rem;
+    border-radius: 6px;
+    border-left-width: 5px;
+    border-left-style: solid;
+    font-size: 0.95rem;
+  }
+  /* Individual styles for result boxes */
+  .loading-indicator {
+    background-color: #e8eaf6; /* Indigo lighten-5 */
+    border-left-color: #3f51b5; /* Indigo */
+    color: #3f51b5;
+  }
+  .loading-indicator p { margin: 0; text-align: center; }
+  
+  .summary-output {
+    background-color: #e8f5e9; /* Green lighten-5 */
+    border-left-color: #4caf50; /* Green */
+  }
+  .summary-output h2 { margin: 0 0 0.5rem 0; color: #2e7d32; font-size: 1.1em; font-weight: 500; }
+  .summary-output p { margin: 0; color: #388e3c; line-height: 1.5; text-align: left; } /* Align summary text left */
+  
+  .error-message {
+    background-color: #ffebee; /* Red lighten-5 */
+    border-left-color: #f44336; /* Red */
+  }
+  .error-message h2 { margin: 0 0 0.5rem 0; color: #c62828; font-size: 1.1em; font-weight: 500; }
+  .error-message p { margin: 0; color: #d32f2f; line-height: 1.5; text-align: left; } /* Align error text left */
